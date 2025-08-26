@@ -49,11 +49,11 @@ export default function Portfolio() {
             </button>
           </div>
           <ul
-            className={`${
-              isMenuOpen ? 'flex' : 'hidden'
-            } md:flex flex-col md:flex-row md:items-center gap-2 md:gap-6 text-gray-700 w-full md:w-auto mt-4 md:mt-0 transition-all duration-300 ease-in-out`}
+            className={`flex-col md:flex-row md:items-center gap-2 md:gap-6 text-gray-700 w-full md:w-auto mt-4 md:mt-0 transition-all duration-300 ease-in-out ${
+              isMenuOpen ? 'flex' : 'hidden md:flex'
+            }`}
           >
-            {['Intro', 'about', 'skills', 'experience', 'projects', 'education', 'contact'].map((section) => (
+            {['hero', 'about', 'skills', 'experience', 'projects', 'education', 'contact'].map((section) => (
               <li key={section} className="mb-2 md:mb-0">
                 <a
                   href={`#${section}`}
@@ -68,8 +68,12 @@ export default function Portfolio() {
         </nav>
       </header>
 
+      {/* Rest of the sections remain unchanged */}
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen bg-gradient-to-br from-orange-100 to-yellow-50 flex flex-col justify-center items-center text-center px-4 pt-20 animate__animated animate__fadeIn">
+      <section
+        id="hero"
+        className="min-h-screen bg-gradient-to-br from-orange-100 to-yellow-50 flex flex-col justify-center items-center text-center px-4 pt-20 animate__animated animate__fadeIn"
+      >
         <h1 className="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__zoomIn animate__delay-1s">
           Hi, I'm <span className="text-orange-600">Jagdish Chandra Belwal</span>
         </h1>
@@ -80,7 +84,6 @@ export default function Portfolio() {
           <a
             href="https://drive.google.com/file/d/1lDC1dR3bJeHSvNgPkRwW4iQRex7D8axT/view?usp=sharing"
             className="bg-orange-600 text-white px-6 py-2 rounded shadow hover:bg-orange-700 transition-all duration-300 hover:scale-105"
-            download
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -94,6 +97,8 @@ export default function Portfolio() {
           </a>
         </div>
       </section>
+
+ 
 
       {/* About Section */}
       <section id="about" className="py-20 px-6 max-w-6xl mx-auto animate__animated animate__fadeInLeft">
@@ -238,5 +243,6 @@ export default function Portfolio() {
         </div>
       </section>
     </div>
+
   );
 }
