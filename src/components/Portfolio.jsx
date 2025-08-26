@@ -1,20 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import 'animate.css';
 
 export default function Portfolio() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="font-sans bg-white text-black">
       {/* Header Section */}
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 animate__animated animate__fadeInDown">
-        <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-bold text-orange-600 transition-transform duration-300 hover:scale-105">Jagdish Belwal</h1>
-          <ul className="flex gap-6 text-gray-700">
-            {['hero', 'about', 'skills', 'experience', 'projects', 'education', 'contact'].map((section) => (
-              <li key={section}>
-                <a 
-                  href={`#${section}`} 
-                  className="hover:text-orange-600 transition-colors duration-300 hover:underline"
+        <nav className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex justify-between items-center w-full md:w-auto">
+            <h1 className="text-xl font-bold text-orange-600 transition-transform duration-300 hover:scale-105">
+              Jagdish Belwal
+            </h1>
+            <button
+              className="md:hidden text-gray-700 focus:outline-none"
+              onClick={toggleMenu}
+              aria-label="Toggle navigation menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {isMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+          <ul
+            className={`${
+              isMenuOpen ? 'flex' : 'hidden'
+            } md:flex flex-col md:flex-row md:items-center gap-2 md:gap-6 text-gray-700 w-full md:w-auto mt-4 md:mt-0 transition-all duration-300 ease-in-out`}
+          >
+            {['Intro', 'about', 'skills', 'experience', 'projects', 'education', 'contact'].map((section) => (
+              <li key={section} className="mb-2 md:mb-0">
+                <a
+                  href={`#${section}`}
+                  className="block md:inline-block hover:text-orange-600 transition-colors duration-300 hover:underline"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
@@ -33,18 +77,18 @@ export default function Portfolio() {
           A Passionate Frontend Developer crafting high-performance web & mobile applications using React.js and React Native.
         </p>
         <div className="flex gap-4 animate__animated animate__fadeInUp animate__delay-3s">
-          <a 
-            href="https://drive.google.com/file/d/1lDC1dR3bJeHSvNgPkRwW4iQRex7D8axT/view?usp=drive_link" 
-            className="bg-orange-600 text-white px-6 py-2 rounded shadow hover:bg-orange-700 transition-all duration-300 hover:scale-105" 
+          <a
+            href="https://drive.google.com/file/d/1lDC1dR3bJeHSvNgPkRwW4iQRex7D8axT/view?usp=sharing"
+            className="bg-orange-600 text-white px-6 py-2 rounded shadow hover:bg-orange-700 transition-all duration-300 hover:scale-105"
             download
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
           >
             View Resume
           </a>
-          <a 
-            href="#contact" 
-            className="border border-orange-600 text Funky-orange-600 px-6 py-2 rounded hover:bg-orange-100 transition-all duration-300 hover:scale-105"
+          <a
+            href="#contact"
+            className="border border-orange-600 text-orange-600 px-6 py-2 rounded hover:bg-orange-100 transition-all duration-300 hover:scale-105"
           >
             Let's Connect
           </a>
@@ -98,9 +142,7 @@ export default function Portfolio() {
               ],
             },
             {
-              title
-
-: 'Software Development Intern – Cairovision',
+              title: 'Software Development Intern – Cairovision',
               period: 'Jul 2023 – Aug 2023',
               tasks: [
                 'Built responsive websites with HTML, CSS, JavaScript',
