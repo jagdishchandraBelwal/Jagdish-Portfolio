@@ -53,7 +53,7 @@ export default function Portfolio() {
               isMenuOpen ? 'flex' : 'hidden md:flex'
             }`}
           >
-            {['hero', 'about', 'skills', 'experience', 'projects', 'education', 'contact'].map((section) => (
+            {['Intro', 'about', 'skills', 'experience', 'projects', 'education', 'contact'].map((section) => (
               <li key={section} className="mb-2 md:mb-0">
                 <a
                   href={`#${section}`}
