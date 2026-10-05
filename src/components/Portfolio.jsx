@@ -138,7 +138,7 @@ export default function Portfolio() {
         <div className="space-y-8">
           {[
             {
-              title: 'Frontend Developer – Novaigu',
+              title: 'Frontend Developer – Unbullishable',
               period: 'Aug 2024 – Present',
               tasks: [
                 'Developed License Manager UI using React.js',
