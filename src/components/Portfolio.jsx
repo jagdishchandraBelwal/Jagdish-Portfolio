@@ -82,7 +82,7 @@ export default function Portfolio() {
         </p>
         <div className="flex gap-4 animate__animated animate__fadeInUp animate__delay-3s">
           <a
-            href="https://drive.google.com/file/d/1lDC1dR3bJeHSvNgPkRwW4iQRex7D8axT/view?usp=sharing"
+            href="https://drive.google.com/file/d/1sg01yAtdSV0ftqA0uSJpUH7ommP80dc9/view?usp=drivesdk"
             className="bg-orange-600 text-white px-6 py-2 rounded shadow hover:bg-orange-700 transition-all duration-300 hover:scale-105"
             target="_blank"
             rel="noopener noreferrer"
@@ -104,7 +104,7 @@ export default function Portfolio() {
       <section id="about" className="py-20 px-6 max-w-6xl mx-auto animate__animated animate__fadeInLeft">
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
-          I'm a Frontend Developer based in Gurgaon, India, currently working at <strong>Novaigu</strong>. I specialize in modern UI/UX development using React and React Native for both web and mobile platforms.
+          I'm a Frontend Developer based in Gurgaon, India, currently working at <strong>Unbullishable</strong>. I specialize in modern UI/UX development using React and React Native for both web and mobile platforms.
           With a B.Tech degree in Computer Science and a passion for intuitive interfaces, I aim to build fast, scalable, and accessible applications.
         </p>
       </section>
@@ -138,7 +138,7 @@ export default function Portfolio() {
         <div className="space-y-8">
           {[
             {
-              title: 'Frontend Developer – Novaigu',
+              title: 'Frontend Developer – Unbullishable',
               period: 'Aug 2024 – Present',
               tasks: [
                 'Developed License Manager UI using React.js',
