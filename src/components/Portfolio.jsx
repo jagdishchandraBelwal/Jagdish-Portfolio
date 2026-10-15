@@ -104,7 +104,7 @@ export default function Portfolio() {
       <section id="about" className="py-20 px-6 max-w-6xl mx-auto animate__animated animate__fadeInLeft">
         <h2 className="text-3xl font-bold mb-4">About Me</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
-          I'm a Frontend Developer based in Gurgaon, India, currently working at <strong>Novaigu</strong>. I specialize in modern UI/UX development using React and React Native for both web and mobile platforms.
+          I'm a Frontend Developer based in Gurgaon, India, currently working at <strong>Unbullishable</strong>. I specialize in modern UI/UX development using React and React Native for both web and mobile platforms.
           With a B.Tech degree in Computer Science and a passion for intuitive interfaces, I aim to build fast, scalable, and accessible applications.
         </p>
       </section>
