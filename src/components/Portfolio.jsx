@@ -82,7 +82,7 @@ export default function Portfolio() {
         </p>
         <div className="flex gap-4 animate__animated animate__fadeInUp animate__delay-3s">
           <a
-            href="https://drive.google.com/file/d/1lDC1dR3bJeHSvNgPkRwW4iQRex7D8axT/view?usp=sharing"
+            href="https://drive.google.com/file/d/1sg01yAtdSV0ftqA0uSJpUH7ommP80dc9/view?usp=drivesdk"
             className="bg-orange-600 text-white px-6 py-2 rounded shadow hover:bg-orange-700 transition-all duration-300 hover:scale-105"
             target="_blank"
             rel="noopener noreferrer"
